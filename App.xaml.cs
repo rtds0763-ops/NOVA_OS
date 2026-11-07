@@ -1,1 +1,8 @@
-using System.Windows;echo namespace NOVA_OSecho {echo     public partial class App : Applicationecho     {echo     }echo }
+using System.Windows;
+
+namespace NOVA_OS
+{
+    public partial class App : Application
+    {
+    }
+}
