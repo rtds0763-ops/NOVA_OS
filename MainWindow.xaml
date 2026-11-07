@@ -1,20 +1,24 @@
-<Window x:Class="NOVA_OS.MainWindow">
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-        Title="NOVA OS" Height="600" Width="1000" echo         WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+<Window x:Class="NOVA_OS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NOVA OS" Height="600" Width="1000" 
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+    
     <Grid>
         <Border CornerRadius="20" ClipToBounds="True">
             <Border.Background>
                 <ImageBrush ImageSource="Assets/bg.jpg" Stretch="UniformToFill"/>
             </Border.Background>
-            <Border.Background>
-                <SolidColorBrush Color="#CC000000"/>
-            </Border.Background>
         </Border>
+
+        <Border Background="#CC000000" CornerRadius="20"/>
+
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="NOVA OS" FontSize="72" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
             <TextBlock Text="Современная оболочка для Windows" FontSize="18" Foreground="#AAAAAA" HorizontalAlignment="Center" Margin="0,0,0,40"/>
+            
             <Button Content="ЗАПУСТИТЬ NOVA OS" Style="{StaticResource GlassButton}" Width="250" Height="50" FontSize="18" Click="StartButton_Click"/>
+            
             <Button Content="✕" Style="{StaticResource GlassButton}" Width="40" Height="40" HorizontalAlignment="Right" Margin="0,50,0,0" Click="CloseButton_Click"/>
         </StackPanel>
     </Grid>
