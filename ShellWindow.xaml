@@ -1,0 +1,41 @@
+<Window x:Class="NOVA_OS.ShellWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NOVA OS Shell" WindowState="Maximized" WindowStyle="None" Background="Black">
+    
+    <Grid>
+        <Image Source="Assets/bg.jpg" Stretch="UniformToFill" Opacity="0.8"/>
+        
+        <Border Background="#33000000">
+            <Border.Effect>
+                <BlurEffect Radius="20"/>
+            </Border.Effect>
+        </Border>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="#44000000" BorderBrush="#33FFFFFF" BorderThickness="0,0,1,0">
+                <StackPanel Margin="20">
+                    <TextBlock Text="NOVA OS" FontSize="28" FontWeight="Bold" Foreground="White" Margin="0,0,0,30"/>
+                    
+                    <Button Content="🏠 Главная" Style="{StaticResource GlassButton}" Margin="0,5" HorizontalContentAlignment="Left"/>
+                    <Button Content="🌐 Браузер" Style="{StaticResource GlassButton}" Margin="0,5" HorizontalContentAlignment="Left"/>
+                    <Button Content="⭐ Избранное" Style="{StaticResource GlassButton}" Margin="0,5" HorizontalContentAlignment="Left"/>
+                    <Button Content="⬇ Загрузки" Style="{StaticResource GlassButton}" Margin="0,5" HorizontalContentAlignment="Left"/>
+                    <Button Content="🛡 Happ VPN" Style="{StaticResource GlassButton}" Margin="0,5" HorizontalContentAlignment="Left"/>
+                    <Button Content="👤 Профиль" Style="{StaticResource GlassButton}" Margin="0,5" HorizontalContentAlignment="Left"/>
+                    <Button Content="⚙ Настройки" Style="{StaticResource GlassButton}" Margin="0,5" HorizontalContentAlignment="Left"/>
+                </StackPanel>
+            </Border>
+
+            <Grid Grid.Column="1">
+                <TextBlock Text="Добро пожаловать в NOVA OS" Foreground="White" FontSize="32" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
